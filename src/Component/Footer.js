@@ -1,4 +1,5 @@
 
+import { Copyright } from '@mui/icons-material'
 import React from 'react'
 
 const Footer = () => {
@@ -7,7 +8,7 @@ const Footer = () => {
     return (
         <>
             <footer style={{marginTop:"25%",  display:'flex', justifyContent: "center", alignItems:"center", backgroundColor:"grey"}}>
-                <p style={{textAlign:"center", fontWeight:"bolder"}}>Copyright © {date}</p>
+                <p style={{textAlign:"center", fontWeight:"bolder"}}>Copyright <Copyright/> {date}</p>
             </footer>
         </>
     )
