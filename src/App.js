@@ -15,11 +15,11 @@ function App() {
       return [...preData, note];
     });
   };
-  // const onDelete=(id)=>{
-  //   setItem((note)=>{
-  //     return( note.filter((current)=>{
-  //           return current.id !== id}))})
-  // }
+  const onDelete=(id)=>{
+    setItem((note)=>
+     note.filter((current, ind)=>
+         ind !== id))
+  }
   return (
     <>
       <Header />
@@ -31,9 +31,7 @@ function App() {
             id={index}
             title={val.title}
             content={val.content}
-            deleteItem={(id) => {
-              setItem((note) => note.filter((curr, ind) => ind !== id));
-            }}
+            deleteItem={onDelete}
           />
         );
       })}
